@@ -19,7 +19,7 @@ const ContactList = () => {
     };
 
     fetchData();
-  }, []); // Empty dependency array means this effect will only run once, similar to componentDidMount
+  }, []); 
 
   if (loading) {
     return <p>Loading...</p>;

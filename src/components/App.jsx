@@ -15,13 +15,11 @@ const App = () => {
 
   useEffect(() => {
     if (isInitialLoad) {
-      // La încărcarea inițială, nu vrem să facem un apel suplimentar pentru contacte.
+    
       setIsInitialLoad(false);
       return;
     }
 
-    // Facem un apel suplimentar pentru a obține contactele filtrate.
-    // Asigură-te că metoda fetchContacts acceptă parametri pentru filtru.
     dispatch(fetchContacts());
   }, [dispatch, filter, isInitialLoad]);
 
